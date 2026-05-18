@@ -1,0 +1,95 @@
+{
+  "name": "Astral",
+  "scopeName": "source.astral",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#keywords" },
+    { "include": "#constants" },
+    { "include": "#numbers" },
+    { "include": "#functionDefName" },
+    { "include": "#functionCallName" },
+    { "include": "#operators" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.astral",
+          "match": "//.*$"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.astral",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.astral",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.astral",
+          "match": "\\b(fn|return|if|else|while|and|or|not)\\b"
+        },
+        {
+          "name": "keyword.declaration.astral",
+          "match": "\\blet\\b"
+        },
+        {
+          "name": "support.function.builtin.astral",
+          "match": "\\b(print|input|len)\\b"
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.language.astral",
+          "match": "\\b(true|false|nil)\\b"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.astral",
+          "match": "\\b\\d+(?:\\.\\d+)?\\b"
+        }
+      ]
+    },
+    "functionDefName": {
+      "patterns": [
+        {
+          "name": "entity.name.function.astral",
+          "match": "(?<=\\bfn\\s)[A-Za-z_][A-Za-z0-9_]*"
+        }
+      ]
+    },
+    "functionCallName": {
+      "patterns": [
+        {
+          "name": "variable.function.astral",
+          "match": "\\b[A-Za-z_][A-Za-z0-9_]*(?=\\s*\\()"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.astral",
+          "match": "==|!=|<=|>=|=|<|>|\\+|-|\\*|/|%"
+        }
+      ]
+    }
+  }
+}

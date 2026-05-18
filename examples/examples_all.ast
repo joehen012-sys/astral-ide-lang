@@ -1,0 +1,50 @@
+// Combined Astral examples main file.
+import "examples/examples_all_lib.ast"
+
+print "=== Hello Example ==="
+print hello_message()
+print welcome("Coder")
+
+print "=== Count Example ==="
+count_to(5)
+if is_done(5) {
+  print "done"
+} else {
+  print "not done"
+}
+
+print "=== Functions Example ==="
+print greet("Astral")
+print repeat_tag("*", 5)
+print len("nebula")
+
+print "=== Class + Import Example ==="
+let c = Counter(3)
+print c.get()
+print c.inc()
+print square(5)
+print greet("astral")
+
+print "=== Showcase Example ==="
+let user = input("name> ")
+let banner = repeat("=", 8)
+
+print banner
+print greet(user)
+print f"name: {len(user)}"
+
+if user == "joseph" {
+  print "special user"
+} elif len(user) > 3 {
+  print "long name"
+} else {
+  print "short name"
+}
+
+print banner
+
+
+
+
+
+

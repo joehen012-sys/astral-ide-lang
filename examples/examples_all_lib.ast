@@ -1,0 +1,70 @@
+// Combined library for all Astral examples.
+
+fn hello_message() {
+  return "Hello from Astral!"
+}
+
+fn welcome(name) {
+  return "Welcome, " + name
+}
+
+fn count_to(limit) {
+  let x = 0
+  while x < limit {
+    print x
+    x = x + 1
+  }
+}
+
+fn is_done(x) {
+  return x == 5
+}
+
+fn greet(name) {
+  return "Hello, " + name
+}
+
+fn repeat_tag(tag, count) {
+  let i = 0
+  let out = ""
+  while i < count {
+    out = out + tag
+    i = i + 1
+  }
+  return out
+}
+
+fn repeat(tag, count) {
+  let i = 0
+  let out = ""
+  while i < count {
+    out = out + tag
+    i = i + 1
+  }
+  return out
+}
+
+fn square(x) {
+  return x * x
+}
+
+class Counter {
+  fn init(start) {
+    this.value = start
+  }
+
+  fn inc() {
+    this.value = this.value + 1
+    return this.value
+  }
+
+  fn get() {
+    return this.value
+  }
+}
+
+
+
+
+
+

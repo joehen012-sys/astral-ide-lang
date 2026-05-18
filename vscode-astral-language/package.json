@@ -1,0 +1,43 @@
+{
+  "name": "astral-language-support",
+  "displayName": "Astral Language Support",
+  "description": "Language support for the Astral programming language (.ast)",
+  "version": "0.0.1",
+  "publisher": "local",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "astral",
+        "aliases": [
+          "Astral",
+          "astral"
+        ],
+        "extensions": [
+          ".ast"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "astral",
+        "scopeName": "source.astral",
+        "path": "./syntaxes/astral.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "astral",
+        "path": "./snippets/astral.json"
+      }
+    ]
+  }
+}
